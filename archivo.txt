@@ -1,0 +1,68 @@
+//se crea el objeto tipo factura:
+F_#3223 = FACT(F323423);
+
+//agregando la informacion de una venta
+V_#001.APPEND(JUAN, N1344,3123843993,CALLE 23 #2-12,img.j,F_#3223,GRANDE EMPRESA, Cristian Duran);
+
+//Agregando un nuevo producto a la lista de productos, 
+//la lista se crea automaticamente al instanciar el primer producto
+P_#1211.APPEND(23342,ARROZ,12,12.3%,$30000);
+
+//Agregando un nuevo producto a la lista de productos, 
+P_#1211.APPEND(23342,PAPA,12,12.3%,$30000);
+
+//Agregando un nuevo producto a la lista de productos, 
+P_#1211.APPEND(23342,LENTEJA,12,12.3%,$30000);
+
+//Eliminando el producto ingresado, se elimina proporcionando su identificador único:
+P_#1211.DESTROY();
+
+//agregando el cliente a la factura:
+CL_#123.APPEND(PEDRO,123423,3124324532);
+
+//se crea nuevamente un producto:
+P_#234.APPEND(4323,CARNE,9,9%);
+
+//Eliminando el nit de la venta:
+V_#001.DESTROYNIT();
+
+//Eliminando la direccion de la venta:
+V_#001.DESTROYDIR();
+
+//Editar el nombre la direccion de la factura:
+V_#001.EDIT(calle 12 #12B-11);
+
+//Editar el precio del producto:
+P_#2311.EDIT($32341);
+
+//Calcular el total de dicho producto:
+P_#1121.TOLPRE();
+
+//Agregando otro cliente:
+CL_#1231.APPEND(TUMACOMAN, 131241,312544211);
+
+//Editar el nombre de un cliente:
+CL_#1231.EDITNAME(HOLA);
+
+//Eliminar un cliente:
+CL_#1231.DESTROY();
+
+//Calculando el precio total de la factura:
+F_#3223.TOLFACT();
+
+//Eliminando el item iva de un producto:
+P_#2311.DESTROYIVA();
+
+//Eliminando la cedula de un cliente:
+CL_#1231.DESTROYCED();
+
+//Eliminando la factura:
+F_#3223.DESTROY();
+
+//Eliminando el telefono de un cliente:
+CL_#1231.DESTROYCED();
+
+//Configurando la ubicación de la el logo a el centro:
+F_#3223.img.jpg.LOCATION= 2H;
+
+//F_#3223.img.jpg.LOCATION= 3V;
